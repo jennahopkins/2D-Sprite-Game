@@ -100,3 +100,5 @@ InitTestScene*.unity*
 
 # ignore large file
 /Library/PackageCache/
+Sprite-Flight-Unity/Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
+/Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
