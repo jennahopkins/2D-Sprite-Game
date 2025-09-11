@@ -945,6 +945,7 @@ MonoBehaviour:
   boosterFlame: {fileID: 701392986}
   scoreMultiplier: 10
   uiDocument: {fileID: 2645773}
+  explosionEffect: {fileID: 5027039215746215519, guid: 4bc01d851fd86d642a171c6f676cc44b, type: 3}
 --- !u!1 &540517920
 GameObject:
   m_ObjectHideFlags: 0

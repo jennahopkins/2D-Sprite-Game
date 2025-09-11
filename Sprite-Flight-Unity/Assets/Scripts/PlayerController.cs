@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,12 +9,12 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 5f;
     public GameObject boosterFlame;
     private float elapsedTime = 0f;
-
     private float score = 0f;
     public float scoreMultiplier = 10f;
     private Label scoreText;
-
     public UIDocument uiDocument;
+    public GameObject explosionEffect;
+    private Button restartButton;
 
     Rigidbody2D rb;
 
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
+        restartButton.style.display = DisplayStyle.None;
+        restartButton.clicked += ReloadScene;
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -34,15 +39,15 @@ public class PlayerController : MonoBehaviour
 
     // calculate score based on time survived
     void UpdateScore()
-    { 
+    {
         elapsedTime += Time.deltaTime;
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
-        scoreText.text = "Score: " + score; 
+        scoreText.text = "Score: " + score;
     }
 
     // moves player on the screen
     void MovePlayer()
-    { 
+    {
         if (Mouse.current.leftButton.isPressed)
         {
             // Calculate mouse direction
@@ -73,10 +78,17 @@ public class PlayerController : MonoBehaviour
             boosterFlame.SetActive(false);
         }
     }
-    
+
     // Destroy the player on collision with an obstacle
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        restartButton.style.display = DisplayStyle.Flex;
         Destroy(gameObject);
+    }
+    
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
