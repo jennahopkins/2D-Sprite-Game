@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (2)
@@ -675,6 +679,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (5)
@@ -745,6 +753,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (4)
@@ -815,6 +827,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (1)
@@ -1229,6 +1245,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (7)
@@ -1299,6 +1319,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (6)
@@ -1830,6 +1854,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (8)
@@ -2037,6 +2065,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (9)
@@ -2117,6 +2149,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle (3)
@@ -2182,6 +2218,10 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 2132361411946640646, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 357572485302783479, guid: 03fa26ecba477784085aaeb795f9a8e3, type: 3}
     - target: {fileID: 4121709660760703456, guid: 5367f711bde7b4a458ff9f2d1e72d7ea, type: 3}
       propertyPath: m_Name
       value: Obstacle

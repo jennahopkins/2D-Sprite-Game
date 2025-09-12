@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public GameObject explosionEffect;
     private Button restartButton;
 
+    private float highScore = PlayerPrefs.GetFloat("highScore", 0);
+
     Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour
         restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
         restartButton.style.display = DisplayStyle.None;
         restartButton.clicked += ReloadScene;
-        
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -83,6 +85,11 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Instantiate(explosionEffect, transform.position, transform.rotation);
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetFloat("highScore", highScore);
+        }
         restartButton.style.display = DisplayStyle.Flex;
         Destroy(gameObject);
     }

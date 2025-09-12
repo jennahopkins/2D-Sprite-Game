@@ -8,7 +8,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float minSpeed = 50f;
     public float maxSpeed = 150f;
     public float maxSpinSpeed = 10f;
-    public bounceEffectPrefab;
+    public GameObject bounceEffectPrefab;
 
     Rigidbody2D rb;
 
