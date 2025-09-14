@@ -12,11 +12,12 @@ public class PlayerController : MonoBehaviour
     private float score = 0f;
     public float scoreMultiplier = 10f;
     private Label scoreText;
+    private Label highScoreText;
     public UIDocument uiDocument;
     public GameObject explosionEffect;
     private Button restartButton;
 
-    private float highScore = PlayerPrefs.GetFloat("highScore", 0);
+    private float highScore = 0f;
 
     Rigidbody2D rb;
 
@@ -24,6 +25,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        highScore = PlayerPrefs.GetFloat("highScore", 0);
+        highScoreText = uiDocument.rootVisualElement.Q<Label>("highScoreLabel");
+        highScoreText.text = "High Score: " + highScore;
+
         restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
         restartButton.style.display = DisplayStyle.None;
         restartButton.clicked += ReloadScene;
@@ -45,6 +50,10 @@ public class PlayerController : MonoBehaviour
         elapsedTime += Time.deltaTime;
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
         scoreText.text = "Score: " + score;
+        if (score > highScore)
+        {
+            highScoreText.text = "High Score: " + score;
+        }
     }
 
     // moves player on the screen
@@ -93,7 +102,7 @@ public class PlayerController : MonoBehaviour
         restartButton.style.display = DisplayStyle.Flex;
         Destroy(gameObject);
     }
-    
+
     void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
