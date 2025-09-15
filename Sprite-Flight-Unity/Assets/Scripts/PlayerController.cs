@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public float thrustForce = 1f;
     public float maxSpeed = 5f;
-    public GameObject boosterFlame;
+    public GameObject boosterFlame1;
+    public GameObject boosterFlame2;
     private float elapsedTime = 0f;
     private float score = 0f;
     public float scoreMultiplier = 10f;
@@ -82,11 +83,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            boosterFlame.SetActive(true);
+            boosterFlame1.SetActive(true);
+            boosterFlame2.SetActive(true);
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
-            boosterFlame.SetActive(false);
+            boosterFlame1.SetActive(false);
+            boosterFlame2.SetActive(false);
         }
     }
 
