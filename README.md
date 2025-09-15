@@ -47,6 +47,24 @@ Left click in the direction you want to steer the airplane, being careful to not
 **Technical Details**: I added the images to the scene as childs of my Game Objects for both the storm clouds and the airplane.
 **Known Issues**: [Any bugs specific to this extension]
 
+### 4. Destroy the Borders on Game Over (4 points)
+**Implementation**: I turned the borders off on game over so that the storm clouds would fly off the screen.
+**Game Impact**: This feature makes the game more visually appealing, and gives users more of a story to play into rather than just having the shapes stay there when the game is over. It will be more entertaining and realistic to users.
+**Technical Details**: I created a reference to my Borders Game Object in my PlayerController.cs script, and connected them in the Inspector window. When the player dies, the borders are turned off (SetActive = false), allowing storm clouds to fly off the screen.
+**Known Issues**: [Any bugs specific to this extension]
+
+### 5. Add Ambient Background Particles (4 points)
+**Implementation**: I added some background particles to the game to make it more exciting.
+**Game Impact**: This feature makes the game more visually appealing, and gives users more of a story to play into rather than just having a plain background. It will be more entertaining to users.
+**Technical Details**: I created a new particle effect in a sphere shape, made it slow moving and small (randomly generating), and set the color to the same color as the clouds. In this way, the particles will be a small detail in the background, not taking away from the main gameplay.
+**Known Issues**: [Any bugs specific to this extension]
+
+### 6. Increase Difficulty Over Time (5 points)
+**Implementation**: I changed the bounciness of the physics of the storm clouds to make them gain velocity with each bounce and increase the difficulty of the game.
+**Game Impact**: This feature makes the game more challenging, which makes the game more interesting to seasoned users who find it getting too easy for them and boring.
+**Technical Details**: I increased the bounciness value of the Physics Material to 1.06 from 1.0, so the velocity would increase with each bounce. I chose not to cap the speed so that it can just keep becoming harder and harder to stay alive and not reach a standstill.
+**Known Issues**: [Any bugs specific to this extension]
+
 
 ## Credits
 - Lightning bolt images: "Fun Hyper Casual UI Pack - FREE" by Gelzo on Unity Asset Store

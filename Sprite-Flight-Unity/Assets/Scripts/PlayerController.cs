@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public UIDocument uiDocument;
     public GameObject explosionEffect;
     private Button restartButton;
+    public GameObject Borders;
 
     private float highScore = 0f;
 
@@ -103,6 +104,7 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.SetFloat("highScore", highScore);
         }
         restartButton.style.display = DisplayStyle.Flex;
+        Borders.SetActive(false);
         Destroy(gameObject);
     }
 
