@@ -5,27 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float thrustForce = 1f;
-    public float maxSpeed = 5f;
+    // Object references
     public GameObject boosterFlame1;
     public GameObject boosterFlame2;
+    public GameObject explosionEffect;
+    public GameObject Borders;
+    private Label scoreText;
+    private Label highScoreText;
+    private Button restartButton;
+    public UIDocument uiDocument;
+    Rigidbody2D rb;
+
+    // Movement and scoring variables
+    public float thrustForce = 4f;
+    public float maxSpeed = 5f;
     private float elapsedTime = 0f;
     private float score = 0f;
     public float scoreMultiplier = 10f;
-    private Label scoreText;
-    private Label highScoreText;
-    public UIDocument uiDocument;
-    public GameObject explosionEffect;
-    private Button restartButton;
-    public GameObject Borders;
-
     private float highScore = 0f;
 
-    Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Initialize UI elements
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
         highScore = PlayerPrefs.GetFloat("highScore", 0);
         highScoreText = uiDocument.rootVisualElement.Q<Label>("highScoreLabel");
@@ -46,7 +49,7 @@ public class PlayerController : MonoBehaviour
         BoosterFlame();
     }
 
-    // calculate score based on time survived
+    // calculate score based on time survived and display it
     void UpdateScore()
     {
         elapsedTime += Time.deltaTime;
@@ -97,17 +100,23 @@ public class PlayerController : MonoBehaviour
     // Destroy the player on collision with an obstacle
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Show explosion effect
         Instantiate(explosionEffect, transform.position, transform.rotation);
+
+        // Update high score
         if (score > highScore)
         {
             highScore = score;
             PlayerPrefs.SetFloat("highScore", highScore);
         }
+
+        // Show restart button and disable borders
         restartButton.style.display = DisplayStyle.Flex;
         Borders.SetActive(false);
         Destroy(gameObject);
     }
 
+    // Reload the current scene once restart button is clicked
     void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
