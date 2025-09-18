@@ -1,7 +1,7 @@
 # Storm Dodgers
 
 ## Play the Game
-**Unity Play Link**: [Your Unity Play URL]
+**Unity Play Link**: https://play.unity.com/en/games/92e534b4-ea0d-49d3-b729-cd47977ab930/storm-dodgers-2d-sprite-flight
 
 ## Game Overview
 Storm Dodgers is a simple game where the player is an airplane trying to dodge storm clouds. Storm clouds bump and bounce off of one another, changing direction quickly in the zero-gravity environment. The airplane must not touch any of the storm clouds or edges of the screen to stay alive for as long as they can. Try to beat your high score!
@@ -27,6 +27,7 @@ Left click and hold in the direction you want to steer the airplane, being caref
 
 ### Limitations
 - Sprite colliders were impossible to make comletely fit my shapes/images, so the airplane and storm clouds might slighly 'go into each other' before bouncing away (especially on corners), though not very noticeably.
+- Game was developed on 16:9 aspect ratio in Unity Editor, but when published to Unity Play it seems the width is larger and it shows the outside of my side borders. I'm not sure why this happened since it is supposed to be a fixed ratio, but the game is still fully functional.
 
 ## Extensions Implemented
 
