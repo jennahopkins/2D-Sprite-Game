@@ -98,7 +98,7 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
-# ignore large file
+# 3 files too large to put on git
 /Library/PackageCache/
 Sprite-Flight-Unity/Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
 /Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
