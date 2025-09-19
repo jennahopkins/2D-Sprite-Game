@@ -102,4 +102,7 @@ InitTestScene*.unity*
 /Library/PackageCache/
 Sprite-Flight-Unity/Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
 /Library/PackageCache/com.unity.burst@f7a407abf4d5/.Runtime/libburst-llvm-19.dylib
+Sprite-Flight-Unity/Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a
 /Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a
+Sprite-Flight-Unity/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a 
+/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a 
